@@ -48,8 +48,8 @@ importers:
         specifier: ^0.9.3
         version: 0.9.3
       tailwindcss:
-        specifier: 4.1.11
-        version: 4.1.11
+        specifier: 4.0.0-alpha.13
+        version: 4.0.0-alpha.13
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -923,9 +923,6 @@ packages:
 
   tailwindcss@4.0.0-alpha.13:
     resolution: {integrity: sha512-YbLm8I10/bsGr7zrUNxn4Soj9Lc71anTWu/ulgry64rbBU4m0vov539+caeifAiKhsef2NUCW1twaqH3NfJd2Q==}
-
-  tailwindcss@4.1.11:
-    resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
 
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
@@ -2035,8 +2032,6 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwindcss@4.0.0-alpha.13: {}
-
-  tailwindcss@4.1.11: {}
 
   trim-lines@3.0.1: {}
 
