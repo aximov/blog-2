@@ -10,7 +10,7 @@ export default function Page() {
       <p className="mb-4">
         {`I'm a software engineer at `}
         <Link
-          href="https://legalscape.jp"
+          href="https://www.legalscape.jp"
           className="underline hover:no-underline"
         >
           Legalscape
