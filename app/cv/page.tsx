@@ -13,8 +13,10 @@ export default function CVPage() {
         >
           Legalscape
         </Link>{" "}
-        as an Engineer. Mainly developing backend API services, also maintaining
-        web frontend and infrastructure.
+        as a Software Engineer, developing backend services, maintaining web
+        frontends and infrastructure, and managing security and compliance
+        initiatives. Prior to my engineering career, I studied high energy
+        astronomy and earned a master's degree from Tokyo University of Science.
       </p>
 
       <div className="mb-8">
@@ -71,7 +73,8 @@ export default function CVPage() {
             Intermediate familiarity with network, security, systems design, and
             software design
           </li>
-          <li>Familiarity with some GCP services</li>
+          <li>Proficiency with Google Cloud</li>
+          <li>Basic familiarity with AWS, Azure</li>
           <li>Familiarity with Elasticsearch</li>
         </ul>
       </div>
@@ -154,10 +157,59 @@ export default function CVPage() {
               <tr className="border-b">
                 <th className="text-left py-2 pr-4 whitespace-nowrap">When</th>
                 <th className="text-left py-2 pr-4 whitespace-normal">What</th>
-                <th className="text-left py-2 whitespace-nowrap">Score</th>
+                <th className="text-left py-2 whitespace-nowrap">Result</th>
               </tr>
             </thead>
             <tbody>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">Jul 2025</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  IPA Network Specialist Examination
+                </td>
+                <td className="py-2 whitespace-nowrap">Passed</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">Jul 2025</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  CCI Japan Business Law Examination, Grade 3
+                </td>
+                <td className="py-2 whitespace-nowrap">Passed</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">Jun 2025</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  Microsoft Certified: Azure Fundamentals
+                </td>
+                <td className="py-2 whitespace-nowrap">Passed</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">May 2025</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  AWS Certified Cloud Practitioner
+                </td>
+                <td className="py-2 whitespace-nowrap">Passed</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">Jan 2025</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  Google Cloud Certified - Professional Cloud Developer
+                </td>
+                <td className="py-2 whitespace-nowrap">Passed</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">Nov 2024</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  Google Cloud Certified - Professional Cloud Architect
+                </td>
+                <td className="py-2 whitespace-nowrap">Passed</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 pr-4 whitespace-nowrap">Oct 2024</td>
+                <td className="py-2 pr-4 whitespace-normal">
+                  IPA Registered Information Security Specialist
+                </td>
+                <td className="py-2 whitespace-nowrap">Registered</td>
+              </tr>
               <tr className="border-b">
                 <td className="py-2 pr-4 whitespace-nowrap">Jun 2019</td>
                 <td className="py-2 pr-4 whitespace-normal">
