@@ -1,0 +1,40 @@
+---
+title: "Scrum and Kanban in production"
+publishedAt: "2023-01-14"
+summary: "Exploring the balance between Scrum and Kanban methodologies in real-world software development."
+---
+
+# Scrum and Kanban in production
+
+This article traces how I came up with a solution to a problem I recently faced regarding development and operational processes. I dared to write a raw trajectory, which may be difficult to read.
+
+---
+
+I have to keep promises to users, bosses, investors, and stakeholders and develop to deliver results while keeping up with operational tasks. Development projects have deadlines, and multiple projects are running in parallel. Operational tasks are relentless and full of deadlines.
+Since my typical work environment, I assumed many people had experienced this situation. There must be some helpful insights into these issues.
+
+At first, I thought, "Since the focus is on how to effectively deal with development and operations simultaneously, why not look to DevOps and SRE for a good example?" I skimmed through Effective DevOps, but it didn't quite suit me: DevOps is a cultural movement that seeks to break down silos and verticals throughout an organization, aiming for total business optimization, including development and operations. While I share that spirit strongly, I struggle to implement it in the field, where one team does both development and operations. Implementation is the problem.
+
+So let's divide and conquer. First, regarding the development process, I was using an Agile-like methodology, but I needed to understand what exactly Agile was in the first place. I re-read Agile Samurai. (Actually, not to solve this problem but because I wanted to coincidentally review project management methods at the right time.) I also looked up another book ([Kanban and Scrum](https://www.infoq.com/minibooks/kanban-scrum-minibook/)), and the method described in Agile Samurai is known as Scrum. There are some differences in terminology, but if I were to extract the processes that characterize Agile, I would summarize it as follows.
+
+- Plan at the beginning of the project. At this stage, it is sufficient to have an overall picture of the project, its success criteria, and what is needed to complete it. ([Path-to-production mapping](https://www.thoughtworks.com/radar/techniques/path-to-production-mapping))
+- Gather user stories. It is sufficient to gather requirements and only a rough common understanding of the specifications and design.
+- Make a rough estimate with the stories you have gathered. Wait to make a commitment or keep it broad. If you commit to the project completion date at this stage, agree instead to adjust the scope when push comes to shove.
+- Divide the entire project into time boxes (iterations) of about 1-4 weeks each
+- Measure the team's development speed continuously. This velocity determines the number of stories to work on per iteration.
+- Complete user stories per iteration. Completion means you can deploy what you have created and show a working product to your users and customers.
+- If the project clouds over, adjust the scope or due date.
+
+In fact, after adjusting and implementing such a process in a real-life situation, my team ran a development project smoothly, kept our promises, and delivered results even when something unexpected happened. The team has started with small projects but is gradually taking on larger ones.
+
+So what should I do about the operation? Agile Samurai noted the concept of Kanban as a contrast to iteration, and Effective DevOps also touched on the idea of Kanban. I had been using Kanban boards for years but had yet to learn much about the Kanban philosophy. So I learned about Kanban. Kanban is also one of the methods that originated from Agile and have the following characteristics:
+
+- Kanban focuses on task cycle time optimization.
+- There is no iteration in Kanban; instead, there is an upper limit to the amount of work a team can do for each task state. In other words, there is a limit on the number of work-in-progress.
+- Kanban visualizes the status of tasks on a board.
+
+As noted in Agile Samurai, Kanban is suited for continuous work that can be tackled in "flow," while Agile (Scrum) is suited for project-type work with clear deadlines. If a team is to do both simultaneously, they will need to develop stories that must be completed in iterations while keeping the Kanban flowing constantly. Iterative development is interrupted when cut-in tasks occur, but is it possible to focus on iteration development while optimizing cycle time?
+
+I am still trying to get a clear answer to this question. However, discussing with the team about applying the spirit of Kanban to operational work has helped my team see that there is room for improvement in the process, which has led to reduced cycle time. The Scrum and Kanban processes have their uses, but building a team and culture to realize the spirit of the process has resulted in solving the problem.
+
+So far, I have yet to take advantage of DevOps and SRE practices. I want to deepen my understanding and explore ways to apply them, especially since there are research findings with statistical evidence in the DevOps field.
