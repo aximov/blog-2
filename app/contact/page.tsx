@@ -91,7 +91,7 @@ export default function ContactsPage() {
     <PageContent>
       <div className="mb-16">
         <h1 className="font-bold text-3xl md:text-4xl mb-4 tracking-tight text-slate-900 dark:text-slate-100">
-          Professional Contact
+          Contact
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
           Available for strategic partnerships, technical consultation, and senior engineering opportunities
@@ -125,7 +125,7 @@ export default function ContactsPage() {
         </div>
         <div className="flex-1">
           <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-            I bring 4+ years of experience in building enterprise-grade legal technology solutions. 
+            I bring 5+ years of experience in building enterprise-grade legal technology solutions. 
             My expertise spans backend architecture, cloud infrastructure, and security compliance 
             in regulated environments.
           </p>
@@ -178,7 +178,7 @@ export default function ContactsPage() {
 
       <div className="border-t border-slate-200 dark:border-slate-800 pt-12">
         <h2 className="font-semibold text-xl mb-6 text-slate-900 dark:text-slate-100">
-          Professional Resources
+          Other Resources
         </h2>
         <div className="grid gap-3 md:grid-cols-2">
           {additionalLinks.map((link, index) => {
@@ -228,8 +228,8 @@ export default function ContactsPage() {
               Response Time
             </h3>
             <p className="text-slate-600 dark:text-slate-400">
-              Professional inquiries receive response within <span className="font-medium">24-48 hours</span>. 
-              For urgent technical matters, please indicate priority in your subject line.
+              I typically respond within <span className="font-medium">24-48 hours</span>. 
+              For urgent matters, please indicate priority in your subject line.
             </p>
           </div>
         </div>

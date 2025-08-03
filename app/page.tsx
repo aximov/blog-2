@@ -5,7 +5,7 @@ import { PageContent } from "app/components/page-content";
 export default function Page() {
   return (
     <PageContent>
-      {/* Professional Hero Section */}
+      {/* Hero Section */}
       <div className="mb-20">
         <div className="mb-12">
           <h1 className="mb-6 text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
@@ -16,14 +16,14 @@ export default function Page() {
               Senior Software Engineer
             </p>
             <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-3xl leading-relaxed">
-              4+ years building mission-critical legal technology at Legalscape. 
+              5+ years building mission-critical legal technology at Legalscape. 
               Specialized in backend architecture, cloud infrastructure, and security compliance 
               for enterprise legal solutions.
             </p>
           </div>
         </div>
 
-        {/* Professional Status */}
+        {/* Current Status */}
         <div className="flex flex-col sm:flex-row gap-6 mb-12">
           <div className="flex items-center gap-3 px-5 py-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
             <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
@@ -45,13 +45,13 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Professional CTA */}
+        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Link 
             href="/cv" 
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-lg font-semibold transition-all hover:bg-slate-800 dark:hover:bg-slate-200"
           >
-            Professional Background
+            View CV
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -77,7 +77,7 @@ export default function Page() {
               Designing and implementing scalable backend services for legal tech platforms handling sensitive data and complex workflows.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["TypeScript", "Python", "Node.js", "PostgreSQL"].map(tech => (
+              {["TypeScript", "Python", "Node.js", "MySQL"].map(tech => (
                 <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
                   {tech}
                 </span>
@@ -91,7 +91,7 @@ export default function Page() {
               Building secure, compliant infrastructure on Google Cloud with focus on data protection and regulatory requirements.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["Google Cloud", "Kubernetes", "Security", "Compliance"].map(tech => (
+              {["Google Cloud", "Containers", "Security", "Compliance"].map(tech => (
                 <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
                   {tech}
                 </span>

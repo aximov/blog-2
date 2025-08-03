@@ -28,10 +28,10 @@ export default function CVPage() {
     >
       <motion.div variants={itemAnimation} className="mb-12">
         <h1 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-          Professional Background
+          Curriculum Vitae
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400">
-          Senior Software Engineer with 4+ years in legal technology
+          Senior Software Engineer with 5+ years in legal technology
         </p>
       </motion.div>
 
@@ -142,7 +142,7 @@ export default function CVPage() {
               <div>
                 <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Databases</p>
                 <div className="flex flex-wrap gap-2">
-                  {["PostgreSQL", "MongoDB", "Elasticsearch", "Redis"].map(tech => (
+                  {["MySQL", "Cloud Datastore", "Elasticsearch", "Redis"].map(tech => (
                     <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
                       {tech}
                     </span>
@@ -158,7 +158,7 @@ export default function CVPage() {
               <div>
                 <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Cloud & DevOps</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Google Cloud", "Kubernetes", "Docker", "Terraform", "CI/CD"].map(tech => (
+                  {["Google Cloud", "Docker", "Terraform", "CI/CD", "Monitoring"].map(tech => (
                     <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
                       {tech}
                     </span>
@@ -177,7 +177,7 @@ export default function CVPage() {
       </motion.div>
 
       <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Professional Experience</h2>
+        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Experience</h2>
         <div className="space-y-4">
           <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
@@ -253,7 +253,7 @@ export default function CVPage() {
       </motion.div>
 
       <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Professional Certifications</h2>
+        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Certifications</h2>
         <div className="space-y-6">
           {/* Cloud Certifications */}
           <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
