@@ -142,7 +142,7 @@ export default function CVPage() {
               <div>
                 <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Databases</p>
                 <div className="flex flex-wrap gap-2">
-                  {["MySQL", "Cloud Datastore", "Elasticsearch", "Redis"].map(tech => (
+                  {["MySQL", "Cloud Datastore", "Elasticsearch"].map(tech => (
                     <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
                       {tech}
                     </span>
