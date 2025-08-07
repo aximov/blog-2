@@ -9,6 +9,7 @@ import {
   PenTool,
   Facebook,
 } from "lucide-react";
+import { PageContent } from "app/components/page-content";
 
 export const metadata: Metadata = {
   title: "Contacts",
@@ -87,39 +88,56 @@ const additionalLinks = [
 
 export default function ContactsPage() {
   return (
-    <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">
-        Get in Touch
-      </h1>
+    <PageContent>
+      <div className="mb-16">
+        <h1 className="font-bold text-3xl md:text-4xl mb-4 tracking-tight text-slate-900 dark:text-slate-100">
+          Contact
+        </h1>
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
+          Available for strategic partnerships, technical consultation, and senior engineering opportunities
+        </p>
+      </div>
 
-      <div className="flex flex-col md:flex-row gap-8 mb-12">
-        <div className="flex-shrink-0 text-center">
-          <Image
-            src="/images/profile.jpg"
-            alt="Profile photo"
-            width={150}
-            height={150}
-            className="rounded-full border-2 border-neutral-200 dark:border-neutral-800 mx-auto"
-            priority
-          />
-          <h2 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-            Nakayama Daichi
-          </h2>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            中山 大地
-          </p>
+      <div className="flex flex-col md:flex-row gap-8 mb-16 p-8 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="flex-shrink-0">
+          <div className="relative">
+            <Image
+              src="/images/profile.jpg"
+              alt="Nakayama Daichi - Senior Software Engineer"
+              width={120}
+              height={120}
+              className="rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm"
+              priority
+            />
+          </div>
+          <div className="mt-4">
+            <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              Nakayama Daichi
+            </h2>
+            <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+              Senior Software Engineer
+            </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 rounded text-xs font-medium">
+              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+              Available
+            </div>
+          </div>
         </div>
-        <div className="prose prose-neutral dark:prose-invert">
-          <p>
-            I'm always open to discussing new opportunities, collaborations, or
-            just having a chat about technology. Feel free to reach out through
-            any of the channels below.
+        <div className="flex-1">
+          <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            I bring 5+ years of experience in building enterprise-grade legal technology solutions. 
+            My expertise spans backend architecture, cloud infrastructure, and security compliance 
+            in regulated environments.
+          </p>
+          <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Open to discussing technical leadership roles, consulting opportunities, 
+            and strategic partnerships in the legal tech space.
           </p>
         </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 mb-12">
-        {contactMethods.map((method) => {
+      <div className="grid gap-4 md:grid-cols-2 mb-16">
+        {contactMethods.map((method, index) => {
           const Icon = method.icon;
           return (
             <a
@@ -131,38 +149,39 @@ export default function ContactsPage() {
                   ? "noopener noreferrer"
                   : undefined
               }
-              className={`group relative overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 transition-all duration-200 ${method.color}`}
+              className="group flex items-start gap-4 p-5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 transition-all hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700"
+              style={{
+                animationDelay: `${index * 100}ms`,
+                animation: 'fadeIn 0.5s ease-out forwards'
+              }}
             >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <Icon
-                    className={`h-6 w-6 ${method.iconColor} transition-colors`}
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">
-                    {method.name}
-                  </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-                    {method.label}
-                  </p>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-2">
-                    {method.description}
-                  </p>
-                </div>
+              <div className="flex-shrink-0 p-2 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                <Icon
+                  className={`h-5 w-5 ${method.iconColor}`}
+                />
               </div>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-transparent to-transparent group-hover:from-neutral-50/50 group-hover:to-transparent dark:group-hover:from-neutral-900/20 transition-all duration-300" />
+              <div className="flex-1 min-w-0">
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100 group-hover:text-slate-600 dark:group-hover:text-slate-400 transition-colors">
+                  {method.name}
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                  {method.label}
+                </p>
+                <p className="text-sm text-slate-500 dark:text-slate-500 mt-2">
+                  {method.description}
+                </p>
+              </div>
             </a>
           );
         })}
       </div>
 
-      <div className="border-t border-neutral-200 dark:border-neutral-800 pt-8">
-        <h2 className="font-semibold text-lg mb-4 tracking-tighter">
-          Other Links
+      <div className="border-t border-slate-200 dark:border-slate-800 pt-12">
+        <h2 className="font-semibold text-xl mb-6 text-slate-900 dark:text-slate-100">
+          Other Resources
         </h2>
         <div className="grid gap-3 md:grid-cols-2">
-          {additionalLinks.map((link) => {
+          {additionalLinks.map((link, index) => {
             const Icon = link.icon;
             return (
               <a
@@ -174,14 +193,20 @@ export default function ContactsPage() {
                     ? "noopener noreferrer"
                     : undefined
                 }
-                className="group flex items-center space-x-3 rounded-md border border-neutral-200 dark:border-neutral-800 p-4 transition-all hover:bg-neutral-50 dark:hover:bg-neutral-950/50"
+                className="group flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 transition-all hover:shadow-sm hover:border-slate-300 dark:hover:border-slate-700"
+                style={{
+                  animationDelay: `${(index + 5) * 100}ms`,
+                  animation: 'slideIn 0.5s ease-out forwards'
+                }}
               >
-                <Icon className="h-5 w-5 text-neutral-600 dark:text-neutral-400" />
+                <div className="p-2 bg-slate-200 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">
+                  <Icon className="h-4 w-4" />
+                </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                  <p className="font-medium text-slate-900 dark:text-slate-100">
                     {link.name}
                   </p>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500">
+                  <p className="text-sm text-slate-500 dark:text-slate-500">
                     {link.description}
                   </p>
                 </div>
@@ -191,15 +216,24 @@ export default function ContactsPage() {
         </div>
       </div>
 
-      <div className="mt-12 p-6 rounded-lg bg-neutral-50 dark:bg-neutral-950/50 border border-neutral-200 dark:border-neutral-800">
-        <h3 className="font-semibold text-sm mb-2 text-neutral-900 dark:text-neutral-100">
-          Response Time
-        </h3>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          I typically respond to emails within 24-48 hours. For urgent matters,
-          please mention it in your subject line.
-        </p>
+      <div className="mt-12 p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="flex items-start gap-4">
+          <div className="p-2 bg-slate-200 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg mb-2 text-slate-900 dark:text-slate-100">
+              Response Time
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400">
+              I typically respond within <span className="font-medium">24-48 hours</span>. 
+              For urgent matters, please indicate priority in your subject line.
+            </p>
+          </div>
+        </div>
       </div>
-    </section>
+    </PageContent>
   );
 }
