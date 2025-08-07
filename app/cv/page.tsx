@@ -158,7 +158,7 @@ export default function CVPage() {
               <div>
                 <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Cloud & DevOps</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Google Cloud", "Docker", "Terraform", "CI/CD", "Monitoring"].map(tech => (
+                  {["Google Cloud", "Containers", "Terraform", "CI/CD", "Monitoring"].map(tech => (
                     <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
                       {tech}
                     </span>
@@ -168,7 +168,8 @@ export default function CVPage() {
               <div>
                 <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Security & Compliance</p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Experience with security best practices, data protection regulations, and compliance frameworks in legal tech
+                  Experience with ISO/IEC 27001 (Information Security Management System, ISMS) and ISO/IEC 27017 (Cloud Security Controls) implementation,
+                  security best practices, data protection regulations, and compliance frameworks in legal tech
                 </p>
               </div>
             </div>
