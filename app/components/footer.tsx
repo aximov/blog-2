@@ -1,39 +1,30 @@
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
 export default function Footer() {
   return (
-    <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
-          </a>
-        </li>
-      </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        Since 2021 © Nakayama Daichi.
-      </p>
+    <footer className="w-full bg-secondary text-primary border-t-4 border-primary pt-12 pb-24 mt-auto">
+      <div className="layout-grid">
+        <div className="col-span-full mb-12">
+          <h2 className="text-[12vw] leading-none font-bold tracking-tighter opacity-10 select-none">
+            AXIMOV
+          </h2>
+        </div>
+
+        <div className="col-span-2 md:col-span-4">
+          <p className="font-mono text-sm uppercase mb-4 text-accent">Connect</p>
+          <ul className="space-y-2">
+            <li><a href="https://x.com/aximovich" target="_blank" className="hover:text-accent font-bold text-xl block">X / TWITTER</a></li>
+            <li><a href="https://github.com/aximov" target="_blank" className="hover:text-accent font-bold text-xl block">GITHUB</a></li>
+            <li><a href="/rss" className="hover:text-accent font-bold text-xl block">RSS FEED</a></li>
+          </ul>
+        </div>
+
+        <div className="col-span-2 md:col-span-4 md:col-start-9">
+          <p className="font-mono text-sm uppercase mb-4 text-accent">Legal</p>
+          <p className="text-sm text-secondary font-medium">
+            © Since 2021 NAKAYAMA DAICHI.<br />
+            ALL RIGHTS RESERVED.
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }

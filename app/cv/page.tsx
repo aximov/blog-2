@@ -20,305 +20,171 @@ export default function CVPage() {
   };
 
   return (
-    <motion.section 
-      className="max-w-4xl"
+    <motion.section
+      className="col-span-full"
       initial="hidden"
       animate="show"
       variants={containerAnimation}
     >
-      <motion.div variants={itemAnimation} className="mb-12">
-        <h1 className="mb-4 text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-          Curriculum Vitae
+      <motion.div variants={itemAnimation} className="mb-24 md:mb-32">
+        <h1 className="text-[10vw] leading-[0.85] font-black tracking-tighter uppercase mb-6">
+          CURRICULUM<br className="md:hidden" /> VITAE
         </h1>
-        <p className="text-lg text-slate-600 dark:text-slate-400">
-          Senior Software Engineer with 5+ years in legal technology
-        </p>
-      </motion.div>
-
-      <motion.div className="mb-12 p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm" variants={itemAnimation}>
-        <h2 className="text-xl font-semibold mb-4 text-slate-900 dark:text-slate-100">Executive Summary</h2>
-        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-          Currently serving as a Senior Software Engineer at{" "}
-          <Link
-            href="https://www.legalscape.jp"
-            className="font-medium text-slate-900 dark:text-slate-100 hover:text-slate-600 dark:hover:text-slate-400 transition-colors"
-          >
-            Legalscape
-          </Link>
-          , where I architect and implement mission-critical backend services for enterprise legal solutions. 
-          My expertise spans backend architecture, cloud infrastructure on Google Cloud, and security compliance 
-          in highly regulated environments. I bring a unique combination of technical depth and business acumen, 
-          having successfully delivered systems that handle sensitive legal data at scale.
-        </p>
-      </motion.div>
-
-      <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Technical Projects</h2>
-
-        <div className="space-y-6">
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-slate-100">Personal Projects</h3>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-slate-400 rounded-full mt-2"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-slate-800 dark:text-slate-200">
-                    <Link
-                      href="https://tokura.app/"
-                      className="text-slate-900 dark:text-slate-100 hover:text-slate-600 dark:hover:text-slate-400 transition-colors"
-                    >
-                      匿ラのあの回
-                    </Link>
-                    <span className="text-sm text-slate-500 dark:text-slate-500 ml-2">(2021)</span>
-                  </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Developed a specialized search engine for{" "}
-                    <Link
-                      href="https://www.youtube.com/channel/UClSsb_e0HDQ-w7XuwNPgGqQ/featured"
-                      className="text-slate-700 dark:text-slate-300 hover:text-slate-500 transition-colors"
-                    >
-                      匿名ラジオ
-                    </Link>
-                    , demonstrating full-stack capabilities and search optimization expertise.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-slate-100">Research & Infrastructure</h3>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-slate-400 rounded-full mt-2"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-slate-800 dark:text-slate-200">resonantor</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    High-performance X-ray resonant scattering simulator for astrophysics research. 
-                    Built with C++ and Geant4, demonstrating expertise in computational physics and performance optimization.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-slate-400 rounded-full mt-2"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-slate-800 dark:text-slate-200">resonantor-pipeline</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Automated parallel processing pipeline in Python for large-scale scientific computations.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-slate-400 rounded-full mt-2"></div>
-                <div className="flex-1">
-                  <p className="font-medium text-slate-800 dark:text-slate-200">mg-control-tower</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Infrastructure as Code solution for on-premises Linux clusters. 
-                    Implemented with Ansible, Docker, Prometheus, and Grafana for comprehensive monitoring and automation.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
+          <div className="col-span-4 md:col-span-6">
+            <p className="text-xl md:text-2xl font-bold leading-tight">
+              Senior Software Engineer realizing mission-critical legal technology.
+            </p>
           </div>
         </div>
       </motion.div>
 
-      <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Technical Expertise</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="font-semibold text-lg mb-4 text-slate-900 dark:text-slate-100">Core Technologies</h3>
-            <div className="space-y-3">
-              <div>
-                <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Languages</p>
-                <div className="flex flex-wrap gap-2">
-                  {["TypeScript", "Python", "C++", "SQL"].map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Databases</p>
-                <div className="flex flex-wrap gap-2">
-                  {["MySQL", "Cloud Datastore", "Elasticsearch"].map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="font-semibold text-lg mb-4 text-slate-900 dark:text-slate-100">Infrastructure & Operations</h3>
-            <div className="space-y-3">
-              <div>
-                <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Cloud & DevOps</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Google Cloud", "Containers", "Terraform", "CI/CD", "Monitoring"].map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm font-medium">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="font-medium text-slate-700 dark:text-slate-300 mb-2">Security & Compliance</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Experience with ISO/IEC 27001 (Information Security Management System, ISMS) and ISO/IEC 27017 (Cloud Security Controls) implementation,
-                  security best practices, data protection regulations, and compliance frameworks in legal tech
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Experience</h2>
-        <div className="space-y-4">
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Senior Software Engineer</h3>
-                <p className="text-slate-600 dark:text-slate-400">Legalscape</p>
-              </div>
-              <p className="text-sm text-slate-500 dark:text-slate-500 mt-1 md:mt-0">Jul 2020 - Present</p>
-            </div>
-            <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-              <li className="flex items-start gap-2">
-                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-1.5"></div>
-                <span>Architect and implement mission-critical backend services for enterprise legal solutions</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-1.5"></div>
-                <span>Lead security and compliance initiatives for handling sensitive legal data</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-1.5"></div>
-                <span>Design and maintain cloud infrastructure on Google Cloud Platform</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-1.5"></div>
-                <span>Mentor junior engineers and contribute to technical decision-making</span>
-              </li>
+      {/* Capabilities / Skills (Restored) */}
+      <motion.div variants={itemAnimation} className="mb-24 hard-border-b pb-12">
+        <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Capabilities</h2>
+        <div className="grid grid-cols-4 md:grid-cols-12 gap-y-8 md:gap-x-6">
+          <div className="col-span-4 md:col-span-6 lg:col-span-4">
+            <h3 className="text-xl font-bold uppercase mb-4">Core Tech</h3>
+            <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
+              <li>TypeScript / Python</li>
+              <li>Node.js / SQL</li>
+              <li>MySQL / Cloud Datastore</li>
+              <li>Elasticsearch</li>
+              <li>C++ (Research)</li>
             </ul>
           </div>
-          
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Assistant Editor - Programming Education</h3>
-                <p className="text-slate-600 dark:text-slate-400">Dwango (Part-time)</p>
-              </div>
-              <p className="text-sm text-slate-500 dark:text-slate-500 mt-1 md:mt-0">Dec 2016 - Mar 2020</p>
+          <div className="col-span-4 md:col-span-6 lg:col-span-4">
+            <h3 className="text-xl font-bold uppercase mb-4">Infrastructure</h3>
+            <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
+              <li>Google Cloud</li>
+              <li>Terraform / Ansible</li>
+              <li>Containers / Docker</li>
+              <li>CI/CD & Monitoring</li>
+            </ul>
+          </div>
+          <div className="col-span-4 md:col-span-6 lg:col-span-4">
+            <h3 className="text-xl font-bold uppercase mb-4">Security</h3>
+            <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
+              <li>ISO/IEC 27001 (ISMS)</li>
+              <li>ISO/IEC 27017 (Cloud Security)</li>
+              <li>Legal Tech Compliance</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Experience */}
+      <motion.div variants={itemAnimation} className="mb-24 hard-border-b pb-12">
+        <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Experience</h2>
+
+        <div className="grid grid-cols-4 md:grid-cols-12 gap-y-12 md:gap-x-6">
+          <div className="col-span-4 md:col-span-3">
+            <span className="text-sm font-bold block mb-1">2020 — PRESENT</span>
+            <span className="text-sm text-secondary">LEGALSCAPE</span>
+          </div>
+          <div className="col-span-4 md:col-span-9">
+            <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Senior Software Engineer</h3>
+            <p className="text-lg text-secondary leading-relaxed mb-6 max-w-3xl">
+              Architecting and implementing backend services for enterprise legal solutions.
+              Leading security compliance (ISMS) and cloud infrastructure on Google Cloud.
+              Driving technical decision-making and mentoring junior engineers.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["TypeScript", "Python", "Google Cloud", "Terraform"].map(tag => (
+                <span key={tag} className="px-2 py-1 border border-secondary text-xs font-bold uppercase">{tag}</span>
+              ))}
             </div>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Contributed to technical content creation and educational materials for programming courses
+          </div>
+
+          <div className="col-span-4 md:col-span-3">
+            <span className="text-sm font-bold block mb-1">2016 — 2020</span>
+            <span className="text-sm text-secondary">DWANGO</span>
+          </div>
+          <div className="col-span-4 md:col-span-9">
+            <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Assistant Editor</h3>
+            <p className="text-lg text-secondary leading-relaxed max-w-3xl">
+              Technical content creation for programming education. Created curriculum and materials
+              to make complex programming concepts accessible.
             </p>
           </div>
         </div>
       </motion.div>
 
-      <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Education</h2>
-        <div className="space-y-4">
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Master of Science in Astronomy</h3>
-                <p className="text-slate-600 dark:text-slate-400">Tokyo University of Science</p>
-                <p className="text-sm text-slate-500 dark:text-slate-500">Graduate School of Science, Department of Physics, Matsushita Group</p>
-              </div>
-              <p className="text-sm text-slate-500 dark:text-slate-500 mt-1 md:mt-0">Mar 2020</p>
-            </div>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Research focus: High-energy astrophysics and computational modeling
+      {/* Projects (Restored) */}
+      <motion.div variants={itemAnimation} className="mb-24 hard-border-b pb-12">
+        <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Selected Work</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
+          <div className="group">
+            <Link href="https://tokura.app/" target="_blank" className="block mb-4">
+              <h3 className="text-2xl font-bold uppercase underline decoration-2 decoration-accent underline-offset-4 mb-2">Tokura App</h3>
+              <p className="font-mono text-xs uppercase text-secondary">2021 — Personal Project</p>
+            </Link>
+            <p className="text-secondary leading-relaxed">
+              Specialized search engine for "Tokumei Radio". Demonstrates full-stack search optimization
+              and custom indexing strategies.
             </p>
           </div>
-          
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Bachelor of Science in Physics</h3>
-                <p className="text-slate-600 dark:text-slate-400">Tokyo University of Science</p>
-                <p className="text-sm text-slate-500 dark:text-slate-500">Faculty of Science Division I, Department of Physics</p>
-              </div>
-              <p className="text-sm text-slate-500 dark:text-slate-500 mt-1 md:mt-0">Mar 2018</p>
+
+          <div className="group">
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold uppercase mb-2">Resonantor</h3>
+              <p className="font-mono text-xs uppercase text-secondary">2019 — Research</p>
             </div>
+            <p className="text-secondary leading-relaxed">
+              High-performance X-ray resonant scattering simulator built with C++ and Geant4.
+              Optimized for large-scale astrophysical computations.
+            </p>
+          </div>
+
+          <div className="group">
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold uppercase mb-2">Resonantor Pipeline</h3>
+              <p className="font-mono text-xs uppercase text-secondary">2019 — Research</p>
+            </div>
+            <p className="text-secondary leading-relaxed">
+              Automated parallel processing pipeline in Python. Managed large-scale scientific computation workflows and data analysis.
+            </p>
+          </div>
+
+          <div className="group">
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold uppercase mb-2">MG Control Tower</h3>
+              <p className="font-mono text-xs uppercase text-secondary">2018 — Infrastructure</p>
+            </div>
+            <p className="text-secondary leading-relaxed">
+              Infrastructure as Code solution for on-prem Linux clusters. Built with Ansible, Docker, Prometheus, and Grafana for comprehensive monitoring.
+            </p>
           </div>
         </div>
       </motion.div>
 
-      <motion.div className="mb-12" variants={itemAnimation}>
-        <h2 className="mb-6 text-2xl font-semibold text-slate-900 dark:text-slate-100">Certifications</h2>
-        <div className="space-y-6">
-          {/* Cloud Certifications */}
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="font-semibold text-lg mb-4 text-slate-900 dark:text-slate-100">Cloud & Infrastructure</h3>
-            <div className="space-y-3">
-              {[
-                { name: "Google Cloud Professional Cloud Architect", date: "Nov 2024", status: "Active" },
-                { name: "Google Cloud Professional Cloud Developer", date: "Jan 2025", status: "Active" },
-                { name: "AWS Certified Cloud Practitioner", date: "May 2025", status: "Active" },
-                { name: "Microsoft Azure Fundamentals", date: "Jun 2025", status: "Active" }
-              ].map((cert, index) => (
-                <div key={index} className="flex items-center justify-between py-2 border-b border-slate-100 dark:border-slate-800 last:border-0">
-                  <div>
-                    <p className="font-medium text-slate-800 dark:text-slate-200">{cert.name}</p>
-                    <p className="text-sm text-slate-500">{cert.date}</p>
-                  </div>
-                  <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-medium">
-                    {cert.status}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Security & Compliance */}
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="font-semibold text-lg mb-4 text-slate-900 dark:text-slate-100">Security & Compliance</h3>
-            <div className="space-y-3">
-              {[
-                { name: "IPA Registered Information Security Specialist", date: "Oct 2024", type: "Registration" },
-                { name: "IPA Network Specialist", date: "Jul 2025", type: "Certification" },
-                { name: "CCI Japan Business Law Examination, Grade 3", date: "Jul 2025", type: "Legal Compliance" }
-              ].map((cert, index) => (
-                <div key={index} className="flex items-center justify-between py-2 border-b border-slate-100 dark:border-slate-800 last:border-0">
-                  <div>
-                    <p className="font-medium text-slate-800 dark:text-slate-200">{cert.name}</p>
-                    <p className="text-sm text-slate-500">{cert.date} • {cert.type}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Other Qualifications */}
-          <div className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-            <h3 className="font-semibold text-lg mb-4 text-slate-900 dark:text-slate-100">Additional Qualifications</h3>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between py-2 border-b border-slate-100 dark:border-slate-800">
-                <div>
-                  <p className="font-medium text-slate-800 dark:text-slate-200">IPA Applied Information Technology Engineer</p>
-                  <p className="text-sm text-slate-500">Jun 2019</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-between py-2">
-                <div>
-                  <p className="font-medium text-slate-800 dark:text-slate-200">TOEIC Score</p>
-                  <p className="text-sm text-slate-500">Jul 2015</p>
-                </div>
-                <span className="text-lg font-semibold text-slate-900 dark:text-slate-100">970</span>
+      {/* Certifications (Restored) */}
+      <motion.div variants={itemAnimation} className="mb-24">
+        <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Certifications</h2>
+        <div className="grid grid-cols-1 gap-4">
+          {[
+            { name: "Google Cloud Professional Cloud Architect", date: "Nov 2024", type: "Active" },
+            { name: "Google Cloud Professional Cloud Developer", date: "Jan 2025", type: "Active" },
+            { name: "AWS Certified Cloud Practitioner", date: "May 2025", type: "Active" },
+            { name: "Microsoft Azure Fundamentals", date: "Jun 2025", type: "Active" },
+            { name: "IPA Registered Information Security Specialist", date: "Oct 2024", type: "Registration" },
+            { name: "IPA Network Specialist", date: "Jul 2025", type: "Certification" },
+            { name: "CCI Japan Business Law Examination, Grade 3", date: "Jul 2025", type: "Legal" },
+            { name: "IPA Applied Information Technology Engineer", date: "Jun 2019", type: "Certification" },
+            { name: "TOEIC Score 970", date: "Jul 2015", type: "Score" }
+          ].map((cert, i) => (
+            <div key={i} className="flex flex-col md:flex-row md:items-center justify-between hard-border p-4 hover:bg-fg-primary hover:text-bg-primary transition-colors">
+              <span className="font-bold uppercase text-lg leading-tight block mb-2 md:mb-0">{cert.name}</span>
+              <div className="flex items-center gap-4 font-mono text-xs uppercase">
+                <span>{cert.date}</span>
+                <span className="px-2 py-0.5 border border-current">{cert.type}</span>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </motion.div>
+
     </motion.section>
   );
 }

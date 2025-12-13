@@ -4,50 +4,44 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = {
-  "/": {
-    name: "home",
-  },
-  "/cv": {
-    name: "cv",
-  },
-  "/blog": {
-    name: "blog",
-  },
-  "/contact": {
-    name: "contact",
-  },
+  "/": { name: "HOME" }, // Uppercase for brutalist feel
+  "/cv": { name: "CV" },
+  "/blog": { name: "BLOG" },
+  "/contact": { name: "CONTACT" },
 };
 
 export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
-      <div className="lg:sticky lg:top-20">
-        <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
-        >
-          <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              const isActive = pathname === path || (pathname.startsWith(path) && path !== "/");
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-3 m-1 rounded-lg ${
-                    isActive 
-                      ? "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100" 
-                      : "hover:bg-neutral-50 dark:hover:bg-neutral-900"
+    <nav className="w-full hard-border-b bg-primary sticky top-0 z-50">
+      <div className="layout-grid py-4 flex items-center justify-between">
+        {/* Logo / Brand */}
+        <div className="col-span-2 md:col-span-3 flex items-center">
+          <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-accent transition-colors">
+            AXIMOV
+          </Link>
+        </div>
+
+        {/* Desktop Nav */}
+        <div className="col-span-2 md:col-span-9 flex justify-end gap-x-6 md:gap-x-8">
+          {Object.entries(navItems).map(([path, { name }]) => {
+            const isActive = pathname === path || (pathname.startsWith(path) && path !== "/");
+            return (
+              <Link
+                key={path}
+                href={path}
+                className={`text-sm md:text-base font-bold tracking-tight transition-colors ${isActive
+                    ? "text-accent"
+                    : "text-secondary hover:text-primary"
                   }`}
-                >
-                  {name}
-                </Link>
-              );
-            })}
-          </div>
-        </nav>
+              >
+                {name}
+              </Link>
+            );
+          })}
+        </div>
       </div>
-    </aside>
+    </nav>
   );
 }
