@@ -3,10 +3,12 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-zen-kaku: var(--font-zen-kaku);
 }
 
 ::selection {
-  background-color: #ff4400; /* International Orange */
+  background-color: #ff4400;
+  /* International Orange */
   color: #ffffff;
 }
 
@@ -17,7 +19,7 @@
   --fg-primary: #111111;
   --fg-secondary: #444444;
   --accent: #ff4400;
-  
+
   /* Syntax Highlighting (for code blocks) */
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
@@ -36,7 +38,8 @@
     --bg-secondary: #111111;
     --fg-primary: #ffffff;
     --fg-secondary: #a1a1a1;
-    --accent: #ff4400; /* Keep accent constant or adjust if needed */
+    --accent: #ff4400;
+    /* Keep accent constant or adjust if needed */
 
     /* Syntax Highlighting Dark */
     --sh-class: #4c97f8;
@@ -86,7 +89,8 @@ body {
 
 /* Prose overrides for Brutalist feel */
 .prose {
-  max-width: none; /* Let the grid control width */
+  max-width: none;
+  /* Let the grid control width */
 }
 
 .prose a {
@@ -94,7 +98,9 @@ body {
   text-decoration-color: var(--accent);
 }
 
-.prose h1, .prose h2, .prose h3 {
+.prose h1,
+.prose h2,
+.prose h3 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.02em;

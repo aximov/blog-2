@@ -2,11 +2,19 @@ import "./global.css";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Zen_Kaku_Gothic_New } from "next/font/google";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
+
+const zenKaku = Zen_Kaku_Gothic_New({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-zen-kaku",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -49,7 +57,8 @@ export default function RootLayout({
       className={cx(
         "bg-primary text-secondary tracking-tight", // Use semantic bg/text
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
+        zenKaku.variable
       )}
     >
       <body className="antialiased min-h-screen flex flex-col">

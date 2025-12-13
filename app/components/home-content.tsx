@@ -48,9 +48,8 @@ export function HomeContent({ posts }: HomeContentProps) {
         </h1>
         <div className="mt-8 grid grid-cols-4 md:grid-cols-12 gap-6">
           <div className="col-span-4 md:col-span-5 md:col-start-8">
-            <p className="text-lg md:text-xl leading-tight font-medium text-secondary">
-              Senior Software Engineer building mission-critical architecture.
-              Specialized in backend systems, cloud infrastructure, and security.
+            <p className="text-lg md:text-xl leading-tight font-medium text-secondary font-zen-kaku">
+              テクノロジーで生身では成せないことを成す
             </p>
           </div>
         </div>
@@ -59,26 +58,19 @@ export function HomeContent({ posts }: HomeContentProps) {
       {/* Current Status - Grid Layout */}
       <motion.div variants={item} className="mb-24 hard-border-b pb-12">
         <div className="grid grid-cols-4 md:grid-cols-12 gap-y-8 md:gap-x-6">
-          <div className="col-span-4 md:col-span-3">
+          <div className="col-span-4 md:col-span-6">
             <span className="font-mono text-sm uppercase text-accent mb-2 block">
               Current Role
             </span>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-              <span className="font-bold text-xl">Legalscape</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-xl">Senior Software Engineer</span>
+              <span className="text-lg">Legalscape, Inc.</span>
             </div>
           </div>
 
-          <div className="col-span-4 md:col-span-3">
-            <span className="font-mono text-sm uppercase text-accent mb-2 block">
-              Status
-            </span>
-            <span className="font-bold text-xl text-secondary">
-              Open to Opportunities
-            </span>
-          </div>
 
-          <div className="col-span-4 md:col-span-6 flex flex-col md:flex-row gap-4 md:justify-end">
+
+          <div className="col-span-4 md:col-span-6 flex flex-col md:flex-row gap-4 md:justify-end md:items-end">
             <Link
               href="/cv"
               className="px-8 py-4 bg-primary text-secondary hard-border font-bold hover:bg-secondary hover:text-primary transition-colors text-center uppercase"
@@ -106,23 +98,23 @@ export function HomeContent({ posts }: HomeContentProps) {
 
           <div className="col-span-4 md:col-span-4 md:col-start-5">
             <h3 className="font-mono text-sm uppercase text-accent mb-4">
-              Backend & Arch
+              Application Development
             </h3>
-            <p className="text-xl font-bold mb-4">Scalable Systems</p>
+            <p className="text-xl font-bold mb-4 min-h-[40px] flex items-end">Backend & Data</p>
             <p className="text-secondary leading-relaxed mb-6">
-              Designing services that handle complexity with grace. TypeScript,
-              Python, Node.js, and MySQL.
+              Designing robust and scalable services with TypeScript, Python, and Node.js.
+              Dealing with complexity through maintainable design.
             </p>
           </div>
 
           <div className="col-span-4 md:col-span-4">
             <h3 className="font-mono text-sm uppercase text-accent mb-4">
-              Infrastructure
+              Infrastructure Management
             </h3>
-            <p className="text-xl font-bold mb-4">Cloud Native</p>
+            <p className="text-xl font-bold mb-4 min-h-[40px] flex items-end">Cloud & Security</p>
             <p className="text-secondary leading-relaxed mb-6">
-              Secure, compliant infrastructure on Google Cloud. Containers,
-              Security, and Compliance.
+              Building secure foundations on Google Cloud. Infrastructure as Code,
+              cloud security engineering, and compliance.
             </p>
           </div>
         </div>
@@ -130,16 +122,32 @@ export function HomeContent({ posts }: HomeContentProps) {
 
       {/* Recent Work / Insights */}
       <motion.div variants={item}>
-        <div className="flex items-center justify-between mb-12 border-b-2 border-secondary pb-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-secondary pb-4">
           <h2 className="text-4xl font-bold uppercase tracking-tighter">
-            Insights
+            Writing
           </h2>
-          <Link
-            href="/blog"
-            className="font-mono text-sm uppercase hover:text-accent font-bold"
-          >
-            View All →
-          </Link>
+          <div className="flex gap-6 font-mono text-sm uppercase font-bold mt-4 md:mt-0">
+            <Link
+              href="https://sizu.me/aximov"
+              target="_blank"
+              className="hover:text-accent"
+            >
+              sizu.me ↗
+            </Link>
+            <Link
+              href="https://www.docswell.com/user/aximov"
+              target="_blank"
+              className="hover:text-accent"
+            >
+              Slides ↗
+            </Link>
+            <Link
+              href="/blog"
+              className="hover:text-accent"
+            >
+              Tech Blog →
+            </Link>
+          </div>
         </div>
         <BlogPosts posts={posts} />
       </motion.div>

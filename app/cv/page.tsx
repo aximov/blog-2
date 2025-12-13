@@ -33,41 +33,49 @@ export default function CVPage() {
         <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
           <div className="col-span-4 md:col-span-6">
             <p className="text-xl md:text-2xl font-bold leading-tight">
-              Senior Software Engineer realizing mission-critical legal technology.
+              Senior Software Engineer building enterprise legal solutions.
             </p>
           </div>
         </div>
       </motion.div>
 
-      {/* Capabilities / Skills (Restored) */}
+      {/* Capabilities / Skills */}
       <motion.div variants={itemAnimation} className="mb-24 hard-border-b pb-12">
         <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Capabilities</h2>
         <div className="grid grid-cols-4 md:grid-cols-12 gap-y-8 md:gap-x-6">
-          <div className="col-span-4 md:col-span-6 lg:col-span-4">
-            <h3 className="text-xl font-bold uppercase mb-4">Core Tech</h3>
+          <div className="col-span-4 md:col-span-6 lg:col-span-3">
+            <h3 className="text-xl font-bold uppercase mb-4">Backend</h3>
             <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
-              <li>TypeScript / Python</li>
-              <li>Node.js / SQL</li>
-              <li>MySQL / Cloud Datastore</li>
-              <li>Elasticsearch</li>
-              <li>C++ (Research)</li>
+              <li>API Design</li>
+              <li>Database Modeling</li>
+              <li>Search Systems</li>
+              <li>Distributed Processing</li>
             </ul>
           </div>
-          <div className="col-span-4 md:col-span-6 lg:col-span-4">
-            <h3 className="text-xl font-bold uppercase mb-4">Infrastructure</h3>
+          <div className="col-span-4 md:col-span-6 lg:col-span-3">
+            <h3 className="text-xl font-bold uppercase mb-4">Frontend</h3>
             <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
-              <li>Google Cloud</li>
-              <li>Terraform / Ansible</li>
-              <li>Containers / Docker</li>
-              <li>CI/CD & Monitoring</li>
+              <li>Web Applications</li>
+              <li>Modern Frameworks</li>
+              <li>Responsive UI</li>
             </ul>
           </div>
-          <div className="col-span-4 md:col-span-6 lg:col-span-4">
+          <div className="col-span-4 md:col-span-6 lg:col-span-3">
+            <h3 className="text-xl font-bold uppercase mb-4">Cloud & Infra</h3>
+            <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
+              <li>Cloud Architecture</li>
+              <li>Infrastructure as Code</li>
+              <li>Containers</li>
+              <li>CI/CD</li>
+              <li>Observability</li>
+            </ul>
+          </div>
+          <div className="col-span-4 md:col-span-6 lg:col-span-3">
             <h3 className="text-xl font-bold uppercase mb-4">Security</h3>
             <ul className="space-y-2 text-secondary font-mono text-sm uppercase">
-              <li>ISO/IEC 27001 (ISMS)</li>
-              <li>ISO/IEC 27017 (Cloud Security)</li>
-              <li>Legal Tech Compliance</li>
+              <li>ISMS Operation</li>
+              <li>Cloud Security</li>
+              <li>Regulatory Compliance</li>
             </ul>
           </div>
         </div>
@@ -83,15 +91,40 @@ export default function CVPage() {
             <span className="text-sm text-secondary">LEGALSCAPE</span>
           </div>
           <div className="col-span-4 md:col-span-9">
-            <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Senior Software Engineer</h3>
+            <h3 className="text-3xl font-bold uppercase tracking-tight mb-1">Senior Software Engineer</h3>
+            <span className="block text-sm font-mono text-secondary uppercase mb-4">Solution Value Team, Product Development Div.</span>
             <p className="text-lg text-secondary leading-relaxed mb-6 max-w-3xl">
-              Architecting and implementing backend services for enterprise legal solutions.
-              Leading security compliance (ISMS) and cloud infrastructure on Google Cloud.
-              Driving technical decision-making and mentoring junior engineers.
+              Designing and building backend services for enterprise legal solutions.
+              Managing security compliance (ISMS) and cloud infrastructure on Google Cloud.
+              Guiding technical decisions and supporting engineer growth.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {["TypeScript", "Python", "Google Cloud", "Terraform"].map(tag => (
-                <span key={tag} className="px-2 py-1 border border-secondary text-xs font-bold uppercase">{tag}</span>
+            <div className="space-y-3 mt-6">
+              {[
+                {
+                  label: "Stack",
+                  tags: ["TypeScript", "Python", "Node.js", "Vue", "React", "MySQL", "Google Cloud"]
+                },
+                {
+                  label: "Cloud",
+                  tags: ["App Engine", "Cloud Run", "Cloud SQL", "Cloud Datastore", "Cloud Storage", "Cloud Pub/Sub", "Cloud Scheduler", "Cloud Tasks"]
+                },
+                {
+                  label: "Data & AI",
+                  tags: ["BigQuery", "Looker Studio", "Vertex AI", "Azure OpenAI Service", "Pinecone", "Elasticsearch"]
+                },
+                {
+                  label: "Ops & Sec",
+                  tags: ["Terraform", "Packer", "GitHub Actions", "Cloud IAM", "Secret Manager", "Cloud Monitoring", "Cloud Logging", "ISO 27001", "ISO 27017"]
+                }
+              ].map((group) => (
+                <div key={group.label} className="flex flex-col sm:flex-row sm:items-baseline gap-x-4 gap-y-2">
+                  <span className="text-xs font-mono text-secondary uppercase w-20 shrink-0">{group.label}</span>
+                  <div className="flex flex-wrap gap-2">
+                    {group.tags.map(tag => (
+                      <span key={tag} className="px-2 py-1 border border-secondary text-xs font-bold uppercase">{tag}</span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -102,14 +135,36 @@ export default function CVPage() {
           </div>
           <div className="col-span-4 md:col-span-9">
             <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Assistant Editor</h3>
-            <p className="text-lg text-secondary leading-relaxed max-w-3xl">
+            <p className="text-lg text-secondary leading-relaxed max-w-3xl mb-6">
               Contributed to technical content creation and educational materials for programming courses.
             </p>
+            <div className="flex flex-wrap gap-2">
+              {["JavaScript", "TypeScript", "HTML", "CSS"].map(tag => (
+                <span key={tag} className="px-2 py-1 border border-secondary text-xs font-bold uppercase">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="col-span-4 md:col-span-3">
+            <span className="text-sm font-bold block mb-1">2018 — 2020</span>
+            <span className="text-sm text-secondary">TOKYO UNIVERSITY OF SCIENCE</span>
+          </div>
+          <div className="col-span-4 md:col-span-9">
+            <h3 className="text-3xl font-bold uppercase tracking-tight mb-1">Graduate Student</h3>
+            <span className="block text-sm font-mono text-secondary uppercase mb-4">Matsushita Group</span>
+            <p className="text-lg text-secondary leading-relaxed max-w-3xl mb-6">
+              MSc in Astronomy. Developed X-ray resonant scattering simulator for turbulence velocity estimation.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["C++", "Python", "Geant4"].map(tag => (
+                <span key={tag} className="px-2 py-1 border border-secondary text-xs font-bold uppercase">{tag}</span>
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>
 
-      {/* Projects (Restored) */}
+      {/* Projects */}
       <motion.div variants={itemAnimation} className="mb-24 hard-border-b pb-12">
         <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Selected Work</h2>
 
@@ -120,8 +175,7 @@ export default function CVPage() {
               <p className="font-mono text-xs uppercase text-secondary">2021 — Personal Project</p>
             </Link>
             <p className="text-secondary leading-relaxed">
-              Specialized search engine for "Tokumei Radio". Demonstrates full-stack search optimization
-              and custom indexing strategies.
+              Specialized search engine for "Tokumei Radio."
             </p>
           </div>
 
@@ -131,8 +185,7 @@ export default function CVPage() {
               <p className="font-mono text-xs uppercase text-secondary">2019 — Research</p>
             </div>
             <p className="text-secondary leading-relaxed">
-              High-performance X-ray resonant scattering simulator built with C++ and Geant4.
-              Optimized for large-scale astrophysical computations.
+              X-ray resonant scattering simulator built with C++ and Geant4 for astrophysical research.
             </p>
           </div>
 
@@ -152,13 +205,13 @@ export default function CVPage() {
               <p className="font-mono text-xs uppercase text-secondary">2018 — Infrastructure</p>
             </div>
             <p className="text-secondary leading-relaxed">
-              Infrastructure as Code solution for on-prem Linux clusters. Built with Ansible, Docker, Prometheus, and Grafana for comprehensive monitoring.
+              Infrastructure as Code for on-prem Linux clusters using Ansible, Docker, Prometheus, and Grafana.
             </p>
           </div>
         </div>
       </motion.div>
 
-      {/* Certifications (Restored) */}
+      {/* Certifications */}
       <motion.div variants={itemAnimation} className="mb-24">
         <h2 className="font-mono text-sm uppercase text-accent mb-8 block">Certifications</h2>
         <div className="grid grid-cols-1 gap-4">
