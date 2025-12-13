@@ -30,13 +30,6 @@ export default function CVPage() {
         <h1 className="text-[10vw] leading-[0.85] font-black tracking-tighter uppercase mb-6">
           CURRICULUM<br className="md:hidden" /> VITAE
         </h1>
-        <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
-          <div className="col-span-4 md:col-span-6">
-            <p className="text-xl md:text-2xl font-bold leading-tight">
-              Senior Software Engineer building enterprise legal solutions.
-            </p>
-          </div>
-        </div>
       </motion.div>
 
       {/* Capabilities / Skills */}
@@ -114,7 +107,7 @@ export default function CVPage() {
                 },
                 {
                   label: "Ops & Sec",
-                  tags: ["Terraform", "Packer", "GitHub Actions", "Cloud IAM", "Secret Manager", "Cloud Monitoring", "Cloud Logging", "ISO 27001", "ISO 27017"]
+                  tags: ["Terraform", "Packer", "GitHub Actions", "Cloud IAM", "Secret Manager", "Cloud Monitoring", "Cloud Logging", "ISO/IEC 27001", "ISO/IEC 27017"]
                 }
               ].map((group) => (
                 <div key={group.label} className="flex flex-col sm:flex-row sm:items-baseline gap-x-4 gap-y-2">
@@ -156,7 +149,7 @@ export default function CVPage() {
               MSc in Astronomy. Developed X-ray resonant scattering simulator for turbulence velocity estimation.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["C++", "Python", "Geant4"].map(tag => (
+              {["C++", "Python", "Geant4", "Monte Carlo Simulation", "Spectral Analysis", "Model Fitting"].map(tag => (
                 <span key={tag} className="px-2 py-1 border border-secondary text-xs font-bold uppercase">{tag}</span>
               ))}
             </div>

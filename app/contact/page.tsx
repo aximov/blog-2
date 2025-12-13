@@ -47,13 +47,6 @@ export default function ContactsPage() {
         <h1 className="text-[12vw] leading-[0.85] font-black tracking-tighter uppercase mb-6">
           GET IN<br />TOUCH
         </h1>
-        <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
-          <div className="col-span-4 md:col-span-6">
-            <p className="text-xl md:text-2xl font-bold leading-tight">
-              Available for strategic partnerships, technical consultation, and senior engineering opportunities.
-            </p>
-          </div>
-        </div>
       </motion.div>
 
       <motion.div variants={item} className="mb-24 hard-border-b pb-12">
@@ -75,33 +68,7 @@ export default function ContactsPage() {
         </div>
       </motion.div>
 
-      <motion.div variants={item} className="grid grid-cols-4 md:grid-cols-12 gap-6 mb-24">
-        <div className="col-span-4 md:col-span-12 mb-8">
-          <h2 className="font-mono text-sm uppercase text-accent block">Other Channels</h2>
-        </div>
 
-        <div className="col-span-4 md:col-span-6">
-          <a href="https://sizu.me/aximov" target="_blank" className="block p-6 hard-border hover:bg-accent hover:text-white transition-colors group">
-            <div className="flex items-center justify-between mb-4">
-              <PenTool className="w-6 h-6" />
-              <ArrowUpRight className="w-6 h-6" />
-            </div>
-            <h3 className="text-2xl font-bold uppercase mb-2">Shizuka na Internet</h3>
-            <p className="font-mono text-sm">Personal Writings</p>
-          </a>
-        </div>
-
-        <div className="col-span-4 md:col-span-6">
-          <a href="/cv" className="block p-6 hard-border hover:bg-accent hover:text-white transition-colors group">
-            <div className="flex items-center justify-between mb-4">
-              <FileText className="w-6 h-6" />
-              <ArrowUpRight className="w-6 h-6" />
-            </div>
-            <h3 className="text-2xl font-bold uppercase mb-2">View CV</h3>
-            <p className="font-mono text-sm">Professional Background</p>
-          </a>
-        </div>
-      </motion.div>
     </motion.section>
   );
 }

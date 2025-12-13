@@ -18,9 +18,9 @@ export default function Footer() {
         </div>
 
         <div className="col-span-2 md:col-span-4 md:col-start-9">
-          <p className="font-mono text-sm uppercase mb-4 text-accent">Legal</p>
-          <p className="text-sm text-secondary font-medium">
-            © Since 2021 NAKAYAMA DAICHI.<br />
+          <p className="font-mono text-sm uppercase mb-4 text-accent">Copyright</p>
+          <p className="text-sm opacity-60 font-medium">
+            Since 2021 NAKAYAMA DAICHI.<br />
             ALL RIGHTS RESERVED.
           </p>
         </div>
