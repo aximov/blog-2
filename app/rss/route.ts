@@ -1,6 +1,16 @@
 import { baseUrl } from "app/sitemap";
 import { getBlogPosts } from "app/blog/utils";
 
+// Basic XML escape to avoid breaking RSS and prevent injection via frontmatter
+function escapeXml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 export async function GET() {
   let allBlogs = await getBlogPosts();
 
@@ -14,9 +24,9 @@ export async function GET() {
     .map(
       (post) =>
         `<item>
-          <title>${post.metadata.title}</title>
-          <link>${baseUrl}/blog/${post.slug}</link>
-          <description>${post.metadata.summary || ""}</description>
+          <title>${escapeXml(post.metadata.title)}</title>
+          <link>${baseUrl}/blog/${encodeURIComponent(post.slug)}</link>
+          <description>${escapeXml(post.metadata.summary || "")}</description>
           <pubDate>${new Date(
             post.metadata.publishedAt
           ).toUTCString()}</pubDate>

@@ -4,6 +4,14 @@ import { baseUrl } from "app/sitemap";
 import { CustomMDX } from "app/components/mdx";
 import { notFound } from "next/navigation";
 
+// Escape characters that can break out of the JSON-LD script tag
+function serializeJsonLd(data: unknown) {
+  return JSON.stringify(data)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+}
+
 export async function generateStaticParams() {
   let posts = getBlogPosts();
 
@@ -67,7 +75,7 @@ export default async function Blog({ params }) {
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: serializeJsonLd({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.metadata.title,
