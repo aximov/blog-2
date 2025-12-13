@@ -63,7 +63,7 @@ export function BlogContent({ posts }: { posts: BlogPost[] }) {
                     <Link
                         key={post.slug}
                         className="group block hard-border-b py-8 md:py-12 hover:bg-fg-primary hover:text-bg-primary transition-colors"
-                        href={`/blog/${post.slug}`}
+                        href={`/blog/${encodeURIComponent(post.slug)}`}
                     >
                         <div className="grid grid-cols-4 md:grid-cols-12 gap-4 md:gap-6 items-baseline">
                             <div className="col-span-4 md:col-span-2">
