@@ -48,7 +48,7 @@ export function HomeContent({ posts }: HomeContentProps) {
         </h1>
         <div className="mt-8 grid grid-cols-4 md:grid-cols-12 gap-6">
           <div className="col-span-4 md:col-span-5 md:col-start-8">
-            <p className="text-lg md:text-xl leading-tight font-medium text-secondary font-zen-kaku">
+            <p className="text-lg md:text-xl leading-tight font-medium text-secondary font-[family-name:var(--font-zen-kaku)]">
               テクノロジーで生身では成せないことを成す
             </p>
           </div>
@@ -130,6 +130,7 @@ export function HomeContent({ posts }: HomeContentProps) {
             <Link
               href="https://sizu.me/aximov"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-accent"
             >
               sizu.me ↗
@@ -137,6 +138,7 @@ export function HomeContent({ posts }: HomeContentProps) {
             <Link
               href="https://www.docswell.com/user/aximov"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-accent"
             >
               Slides ↗

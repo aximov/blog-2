@@ -163,7 +163,7 @@ export default function CVPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
           <div className="group">
-            <Link href="https://tokura.app/" target="_blank" className="block mb-4">
+            <Link href="https://tokura.app/" target="_blank" rel="noopener noreferrer" className="block mb-4">
               <h3 className="text-2xl font-bold uppercase underline decoration-2 decoration-accent underline-offset-4 mb-2">Tokura App</h3>
               <p className="font-mono text-xs uppercase text-secondary">2021 — Personal Project</p>
             </Link>

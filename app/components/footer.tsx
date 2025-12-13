@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="col-span-2 md:col-span-4">
           <p className="font-mono text-sm uppercase mb-4 text-accent">Connect</p>
           <ul className="space-y-2">
-            <li><a href="https://x.com/aximovich" target="_blank" className="hover:text-accent font-bold text-xl block">X / TWITTER</a></li>
-            <li><a href="https://github.com/aximov" target="_blank" className="hover:text-accent font-bold text-xl block">GITHUB</a></li>
+            <li><a href="https://x.com/aximovich" target="_blank" rel="noopener noreferrer" className="hover:text-accent font-bold text-xl block">X / TWITTER</a></li>
+            <li><a href="https://github.com/aximov" target="_blank" rel="noopener noreferrer" className="hover:text-accent font-bold text-xl block">GITHUB</a></li>
             <li><a href="/rss" className="hover:text-accent font-bold text-xl block">RSS FEED</a></li>
           </ul>
         </div>

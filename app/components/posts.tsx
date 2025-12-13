@@ -22,17 +22,13 @@ export function BlogPosts({ posts }: BlogPostsProps) {
           }
           return 1;
         })
-        .map((post, index) => {
+        .map((post) => {
           const safeSlug = encodeURIComponent(post.slug);
           return (
             <Link
               key={safeSlug}
               className="group block hard-border-b py-6 hover:bg-fg-primary hover:text-bg-primary transition-colors"
               href={`/blog/${safeSlug}`}
-              style={{
-                animationDelay: `${index * 100}ms`,
-                animation: "slideIn 0.5s ease-out forwards",
-              }}
             >
               <div className="grid grid-cols-4 md:grid-cols-12 gap-4 items-baseline">
                 <div className="col-span-4 md:col-span-3">

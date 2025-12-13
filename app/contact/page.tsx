@@ -47,6 +47,7 @@ export default function ContactsPage() {
               key={method.name}
               href={method.href}
               target={method.href.startsWith("http") ? "_blank" : undefined}
+              rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="group relative flex items-center justify-between p-6 md:p-12 hard-border border-t-0 -mt-[2px] -ml-[2px] hover:bg-fg-primary hover:text-bg-primary transition-colors"
             >
               <div>
