@@ -59,36 +59,39 @@ export function BlogContent({ posts }: { posts: BlogPost[] }) {
             </motion.div>
 
             <motion.div variants={item} className="flex flex-col">
-                {sortedPosts.map((post) => (
-                    <Link
-                        key={post.slug}
-                        className="group block hard-border-b py-8 md:py-12 hover:bg-fg-primary hover:text-bg-primary transition-colors"
-                        href={`/blog/${encodeURIComponent(post.slug)}`}
-                    >
-                        <div className="grid grid-cols-4 md:grid-cols-12 gap-4 md:gap-6 items-baseline">
-                            <div className="col-span-4 md:col-span-2">
-                                <span className="font-mono text-sm uppercase md:text-base opacity-70 group-hover:text-bg-secondary group-hover:opacity-100">
-                                    {formatDate(post.metadata.publishedAt)}
-                                </span>
-                            </div>
+                {sortedPosts.map((post) => {
+                    const safeSlug = encodeURIComponent(post.slug);
+                    return (
+                        <Link
+                            key={safeSlug}
+                            className="group block hard-border-b py-8 md:py-12 hover:bg-fg-primary hover:text-bg-primary transition-colors"
+                            href={`/blog/${safeSlug}`}
+                        >
+                            <div className="grid grid-cols-4 md:grid-cols-12 gap-4 md:gap-6 items-baseline">
+                                <div className="col-span-4 md:col-span-2">
+                                    <span className="font-mono text-sm uppercase md:text-base opacity-70 group-hover:text-bg-secondary group-hover:opacity-100">
+                                        {formatDate(post.metadata.publishedAt)}
+                                    </span>
+                                </div>
 
-                            <div className="col-span-4 md:col-span-7">
-                                <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-tight mb-2 group-hover:translate-x-2 transition-transform duration-300">
-                                    {post.metadata.title}
-                                </h2>
-                                <p className="text-secondary text-lg leading-relaxed max-w-2xl group-hover:text-bg-secondary">
-                                    {post.metadata.summary}
-                                </p>
-                            </div>
+                                <div className="col-span-4 md:col-span-7">
+                                    <h2 className="text-2xl md:text-4xl font-bold uppercase tracking-tight mb-2 group-hover:translate-x-2 transition-transform duration-300">
+                                        {post.metadata.title}
+                                    </h2>
+                                    <p className="text-secondary text-lg leading-relaxed max-w-2xl group-hover:text-bg-secondary">
+                                        {post.metadata.summary}
+                                    </p>
+                                </div>
 
-                            <div className="col-span-4 md:col-span-3 flex justify-end">
-                                <span className="font-mono text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                                    Read Article -&gt;
-                                </span>
+                                <div className="col-span-4 md:col-span-3 flex justify-end">
+                                    <span className="font-mono text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+                                        Read Article -&gt;
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                ))}
+                        </Link>
+                    );
+                })}
             </motion.div>
         </motion.section>
     );
