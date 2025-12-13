@@ -1,16 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Github,
-  Linkedin,
-  Twitter,
-  FileText,
-  PenTool,
-  Facebook,
-  ArrowUpRight
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const item = {
   hidden: { opacity: 0, y: 20 },
@@ -28,11 +19,11 @@ const container = {
 };
 
 const contactMethods = [
-  { name: "Email", href: "mailto:d@alumni.tus.ac.jp", label: "d@alumni.tus.ac.jp", icon: Mail },
-  { name: "GitHub", href: "https://github.com/aximov", label: "@aximov", icon: Github },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/%E5%A4%A7%E5%9C%B0-%E4%B8%AD%E5%B1%B1-62229318a/", label: "Nakayama Daichi", icon: Linkedin },
-  { name: "Twitter / X", href: "https://twitter.com/aximovich", label: "@aximovich", icon: Twitter },
-  { name: "Facebook", href: "https://www.facebook.com/aximov3/", label: "中山 大地", icon: Facebook },
+  { name: "Email", href: "mailto:d@alumni.tus.ac.jp", label: "d@alumni.tus.ac.jp" },
+  { name: "GitHub", href: "https://github.com/aximov", label: "@aximov" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/%E5%A4%A7%E5%9C%B0-%E4%B8%AD%E5%B1%B1-62229318a/", label: "Nakayama Daichi" },
+  { name: "Twitter / X", href: "https://twitter.com/aximovich", label: "@aximovich" },
+  { name: "Facebook", href: "https://www.facebook.com/aximov3/", label: "中山 大地" },
 ];
 
 export default function ContactsPage() {
