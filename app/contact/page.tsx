@@ -49,7 +49,7 @@ export default function ContactsPage() {
         </h1>
       </motion.div>
 
-      <motion.div variants={item} className="mb-24 hard-border-b pb-12">
+      <motion.div variants={item} className="mb-24 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-px bg-primary border-t-2 border-primary">
           {contactMethods.map((method) => (
             <a
