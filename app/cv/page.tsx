@@ -103,8 +103,7 @@ export default function CVPage() {
           <div className="col-span-4 md:col-span-9">
             <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Assistant Editor</h3>
             <p className="text-lg text-secondary leading-relaxed max-w-3xl">
-              Technical content creation for programming education. Created curriculum and materials
-              to make complex programming concepts accessible.
+              Contributed to technical content creation and educational materials for programming courses.
             </p>
           </div>
         </div>
