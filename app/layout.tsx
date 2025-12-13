@@ -2,11 +2,19 @@ import "./global.css";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Zen_Kaku_Gothic_New } from "next/font/google";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
+
+const zenKaku = Zen_Kaku_Gothic_New({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-zen-kaku",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -47,15 +55,18 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        "text-slate-900 bg-slate-50 dark:text-slate-100 dark:bg-slate-950",
+        "bg-primary text-secondary tracking-tight", // Use semantic bg/text
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
+        zenKaku.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="antialiased min-h-screen flex flex-col">
+        <main className="flex-auto flex flex-col">
           <Navbar />
-          {children}
+          <div className="layout-grid flex-1 pt-12 pb-24">
+            {children}
+          </div>
           <Footer />
           <Analytics />
           <SpeedInsights />

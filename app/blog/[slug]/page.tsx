@@ -1,7 +1,16 @@
-import { notFound } from "next/navigation";
-import { CustomMDX } from "app/components/mdx";
-import { formatDate, getBlogPosts } from "app/blog/utils";
+import { formatDate } from "app/blog/format";
+import { getBlogPosts } from "app/blog/utils";
 import { baseUrl } from "app/sitemap";
+import { CustomMDX } from "app/components/mdx";
+import { notFound } from "next/navigation";
+
+// Escape characters that can break out of the JSON-LD script tag
+function serializeJsonLd(data: unknown) {
+  return JSON.stringify(data)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+}
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -61,12 +70,12 @@ export default async function Blog({ params }) {
   }
 
   return (
-    <section>
+    <section className="col-span-full">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: serializeJsonLd({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.metadata.title,
@@ -84,17 +93,23 @@ export default async function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
+
+      <div className="mb-12 md:mb-24">
+        <h1 className="text-[8vw] leading-[0.85] font-black tracking-tighter uppercase mb-6 break-words text-wrap">
+          {post.metadata.title}
+        </h1>
+        <div className="flex justify-between items-end hard-border-b pb-6">
+          <p className="font-mono text-sm uppercase text-secondary">
+            Published on {formatDate(post.metadata.publishedAt)}
+          </p>
+        </div>
       </div>
-      <article className="prose">
-        <CustomMDX source={post.content} />
-      </article>
+
+      <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
+        <article className="col-span-4 md:col-span-8 md:col-start-3 prose prose-lg md:prose-xl prose-stone dark:prose-invert max-w-none">
+          <CustomMDX source={post.content} />
+        </article>
+      </div>
     </section>
   );
 }
