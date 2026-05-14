@@ -46,13 +46,6 @@ export function HomeContent({ posts }: HomeContentProps) {
           <br />
           DAICHI
         </h1>
-        <div className="mt-8 grid grid-cols-4 md:grid-cols-12 gap-6">
-          <div className="col-span-4 md:col-span-5 md:col-start-8">
-            <p className="text-lg md:text-xl leading-tight font-medium text-secondary font-[family-name:var(--font-zen-kaku)]">
-              テクノロジーで生身では成せないことを成す
-            </p>
-          </div>
-        </div>
       </motion.div>
 
       {/* Current Status - Grid Layout */}
