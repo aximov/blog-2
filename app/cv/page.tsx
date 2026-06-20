@@ -211,7 +211,9 @@ export default function CVPage() {
           {[
             { name: "Google Cloud Professional Cloud Architect", date: "Nov 2024", type: "Active" },
             { name: "Google Cloud Professional Cloud Developer", date: "Jan 2025", type: "Active" },
+            { name: "Google Cloud Professional Cloud Security Engineer", date: "Feb 2026", type: "Active" },
             { name: "AWS Certified Cloud Practitioner", date: "May 2025", type: "Active" },
+            { name: "AWS Certified AI Practitioner", date: "Mar 2026", type: "Active" },
             { name: "Microsoft Azure Fundamentals", date: "Jun 2025", type: "Active" },
             { name: "IPA Registered Information Security Specialist", date: "Oct 2024", type: "Registration" },
             { name: "IPA Network Specialist", date: "Jul 2025", type: "Certification" },
